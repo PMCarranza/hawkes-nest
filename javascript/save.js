@@ -1,16 +1,26 @@
 'use strict';
 
-let name;
-let comment;
-const today = new Date();
-console.log(today.toLocaleDateString());
+var user;
+var comment;
+var today = new today();
 
 $('#submit').on('click', function(capture){
     capture.preventDefault();
 
-    name = $('#name').val().trim();
+    user = $('#name').val().trim();
 
     comment = $('#comment').val().trim();
 
-    console.log(name + comment);
+    // store();
+
+    $('.form').trigger('reset');
 })
+
+function store(){
+  localStorage.setItem('user', user);
+  localStorage.setItem('comment', comment);
+  localStorage.setItem('today', today.toLocaleDateString());
+
+  console.log(`${user} ${comment} ${today.toLocaleDateString()}`);
+
+}
