@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body{
+    max-width: 100%;
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(239, 239, 232);
+}
+
+.header{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    margin-bottom: 10%;
+}
+
+.foto{
+    position: relative;
+    grid-row: 1/2;
+    grid-column: 1/5;
+    opacity: .5;
+    max-width: 100%;
+    z-index: -5;
+}
+
+img{
+    max-width: 90%;
+    height: auto;
+}
+
+.home{
+    grid-row: 1/2;    
+    grid-column: 3/4;
+    justify-self: center;
+    font-size: 2vw;
+    font-weight: bold;
+    text-shadow: 1px 1px .5em rgb(10, 29, 100), 0 0 2em rgb(141, 141, 165), 0 0 0.5em rgb(136, 49, 106);
+    padding: 5%;
+}
+
+.comment{
+    grid-row: 1/2;    
+    grid-column: 4/5;
+    justify-self: center;
+    font-size: 2vw;
+    font-weight: bold;
+    text-shadow: 1px 1px .5em rgb(10, 29, 100), 0 0 2em rgb(141, 141, 165), 0 0 0.5em rgb(136, 49, 106);
+    padding: 5%;
+}
+
+.form{
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 10%;
+}
+
+.input2{
+    width: 50%;
+    padding: 1%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    margin-bottom: 2.5%;
+}
+
+textarea {
+    height: 300px;
+    padding: 1%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+    margin-bottom: 5%;
+  }
+
+#submit{
+    border-radius: 20px;
+    font-size: 2vw;
+    color: white;
+    max-width: 25%;
+    background-color: slategray;
+    padding: 1%;
+}
+
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.footer{
+    padding: 1%;
+    background-color: slategray;
+    font-size: 1.5vw;
+    text-align: center;
+}
