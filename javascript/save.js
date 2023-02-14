@@ -22,7 +22,6 @@ var comment;
 var today = new Date();
 
 $('#submit').on('click', function(capture){
-    capture.preventDefault();
 
     user = $('#name').val().trim();
 
