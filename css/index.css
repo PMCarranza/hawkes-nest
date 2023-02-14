@@ -57,6 +57,12 @@ body{
     justify-content: space-around;
 }
 
+.info{
+    padding: 2%;
+    border-radius: 2vw;
+    background-color: whitesmoke;
+}
+
 a:hover{
     transform: scale(1.5);
     transition: 1000ms;
