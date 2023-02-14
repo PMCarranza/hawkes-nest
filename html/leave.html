@@ -22,11 +22,12 @@
 
     <!-- <form action="" method="post"> -->
 
-        <form class="form">
+        <form id="form">
             
             <!--this was removed from the form add if needed = value="name" 1/16/23 mc -->
 
             <input type="text" id="name" name="name" placeholder="Name" class="input2">
+            <input id="today"></input>
             <textarea id="comment" name="comment" placeholder="leave a comment or recommendation here"></textarea>
             <button id="submit">Submit</button>
 
@@ -35,11 +36,14 @@
         <div class="footer">
             <a href="../index.html">HOME</a>
         </div>
-        
-        <script src="https://code.jquery.com/jquery-3.6.3.slim.js" integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=" crossorigin="anonymous"></script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
 
         <script src="../javascript/save.js"></script>
-    
+            
 </body>
 
 </html>

@@ -2,17 +2,31 @@
 
 //retrieving from local storage
 
-const person = '';
-const message = ''
-const date = '';
-
+var person = '';
+var message = ''
+var date = '';
 
 function retrieve(){
-    var who = localStorage.getItem('user');
-    var what = localStorage.getItem('comment');
-    var when = localStorage.getItem('date');
+
+
+    addData();
+}
+
+// retrieve();
+
+
+function addData(){
+      
+        let comments = $('<div>');
+
+        let who = $('<p>').text(person).addClass('who');
+        let what = $('<p>').text(message).addClass('what');
+        let when = $('<p>').text(date).addClass('when');
+    
+        comments.append(when, who, what);
   
-    console.log(`reading from local storage ${who} ${what} ${when}`);
-  };
+        $('.container').append(comments);
+
+};
   
-  retrieve();
+
