@@ -34,24 +34,21 @@ img{
 .container{
     margin: auto;
     max-width: 80%;
-    height: auto;
-    background-color: rgba(255, 255, 255, .6);
-    border-radius: 2vw;    
+    border-radius: 1vw;
+    background-color: bisque;
 }
 
-/* #comments{
-    padding: 2%;
-} */
+#comments div:nth-child(even){
+    background-color: rgba(255, 255, 255, .6);
+}
 
 .when{
-    font-size: 2vw;
-    border-bottom: 1px solid black;
+    font-size: 1vw;
     padding: 1%;
 }
 
 .who{
-    font-size: 2vw;
-    border-bottom: 1px solid black;
+    font-size: 3vw;
     padding: 1%;
 }
 

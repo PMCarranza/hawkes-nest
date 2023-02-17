@@ -1,32 +1,34 @@
 'use strict';
 
-//retrieving from local storage
-
 var person = '';
 var message = ''
 var date = '';
 
-function retrieve(){
+// Firebase watcher .on('child-added)
+    // A Reference represents a specific location in your Database and can be used for reading or writing data to that Database location (firebase - docs - reference)
+    // The child_added event is typically used when retrieving a list of items from the database. Unlike value which returns the entire contents of the location, child_added is triggered once for each existing child and then again every time a new child is added to the specified path (firebase-real time database - docs - guides)
+    // on child added, the function snapshot will be be run
+    database.ref().on('child_added', function(snapshot) {
+        
+        // create a new variable for snapshot for convenience
+        // A snapshot is a picture of the data at a particular database reference at a single point in time
+        var sv = snapshot.val();
 
 
-    addData();
-}
+            
+            let comments = $('<div>');
 
-// retrieve();
-
-
-function addData(){
+            let who = $('<p>').text(sv.user).addClass('who');
+            let what = $('<p>').text(sv.comment).addClass('what');
+            let when = $('<p>').text(sv.date).addClass('when');
+        
+            comments.append(when, who, what);
       
-        let comments = $('<div>');
-
-        let who = $('<p>').text(person).addClass('who');
-        let what = $('<p>').text(message).addClass('what');
-        let when = $('<p>').text(date).addClass('when');
-    
-        comments.append(when, who, what);
-  
-        $('.container').append(comments);
-
-};
-  
+            $('#comments').append(comments); 
+            console.log(sv);
+           
+        // Handle the errors
+    }, function(errorObject) {
+            console.log("Errors handled: " + errorObject.code);
+    });
 
