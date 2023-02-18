@@ -1,40 +1,96 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+/* Color Theme Swatches in Hex */
+.My-Color-Theme-1-hex { color: #CFB699; }
+.My-Color-Theme-2-hex { color: #FFEDD6; }
+.My-Color-Theme-3-hex { color: #CFB699; }
+.My-Color-Theme-4-hex { color: #466E82; }
+.My-Color-Theme-5-hex { color: #99BDCF; }
+
+/* Color Theme Swatches in RGBA */
+.My-Color-Theme-1-rgba { color: rgba(207, 182, 153, 1); }
+.My-Color-Theme-2-rgba { color: rgba(255, 237, 214, 1); }
+.My-Color-Theme-3-rgba { color: rgba(207, 182, 153, 1); }
+.My-Color-Theme-4-rgba { color: rgba(70, 110, 130, 1); }
+.My-Color-Theme-5-rgba { color: rgba(153, 189, 207, 1); }
+
+
+:root{
+    --text:#466E82;
+    --backgrnd: #FFEDD6;
+}
+
+
 body{
     position: relative;
     margin: 0;
     padding-bottom: 6rem;
     max-width: 100%;
     font-family: "Poppins", sans-serif;
-    background: rgb(7,106,223);
-    background: radial-gradient(circle, rgba(7,106,223,1) 0%, rgba(148,187,233,1) 81%, rgba(7,195,223,1) 99%);    min-height: 100vh;
+    background-color: var(--backgrnd);
 }
 
 .header{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 12%;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 25%, rgba(134,131,131,1) 75%, rgba(249,244,244,1) 100%);    
+    margin-bottom: 2.5%;
+}
+
+.comments{
+    width: 99%;
+    position: absolute;
+    top: 1%;
+    text-align: right;
+}
+
+li{
+    font-size: 1.5vw;
+    display: inline;
+    margin-left: 1%;
+}
+
+.info{
+    padding: 1%;
+    color: var(--text);
+    background-color: var(--backgrnd);
+    font-weight: bold;
+}
+
+body > ul > li a:hover{
+    transition: 1000ms;
+    color: var(--backgrnd);
+    background-color: var(--text);
+    text-decoration: none;
 }
 
 .foto{
     opacity: .8;
     max-width: 100%;
-    height: auto;
+}
+
+.title{
+    position: absolute;
+    top: 8%;
+    width: 100%;
 }
 
 #title{
-    margin-top: -15%;
+    text-align: center;
     font-size: 5vw;
     font-weight: bold;
-    color: red;
-    z-index: 2;
+    color: whitesmoke;
+    text-shadow: .25em .25em .25em rgb(24, 22, 22), 0 0 1em rgb(20, 20, 23), 0 0 0.5em rgb(19, 19, 22);
 }
 
 .main{
     margin: 0 auto;
     max-width: 75%;
+}
+
+.text{
+    font-size: 1.5vw;
+    text-align: center;
+    margin-bottom: 5%;
 }
 
 #pair{
@@ -43,30 +99,6 @@ body{
 
 #pair2{
     text-shadow: 2px 2px 2px rgb(24, 22, 22), 0 0 1em rgb(20, 20, 23), 0 0 0.2em rgb(19, 19, 22);
-}
-
-.text{
-    font-size: 1.5vw;
-    text-align: center;
-    margin-bottom: 4%;
-}
-
-.comments{
-    margin-top: 5%;
-    display: flex;
-    justify-content: space-around;
-}
-
-.info{
-    padding: 2%;
-    border-radius: 2vw;
-    background-color: whitesmoke;
-}
-
-a:hover{
-    transform: scale(1.5);
-    transition: 1000ms;
-    color: rgb(63, 104, 148);
 }
 
 .footer{
