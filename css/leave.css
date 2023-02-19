@@ -1,88 +1,139 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+/* Color Theme Swatches in Hex */
+.My-Color-Theme-1-hex { color: #CFB699; }
+.My-Color-Theme-2-hex { color: #FFEDD6; }
+.My-Color-Theme-3-hex { color: #CFB699; }
+.My-Color-Theme-4-hex { color: #466E82; }
+.My-Color-Theme-5-hex { color: #99BDCF; }
+
+/* Color Theme Swatches in RGBA */
+.My-Color-Theme-1-rgba { color: rgba(207, 182, 153, 1); }
+.My-Color-Theme-2-rgba { color: rgba(255, 237, 214, 1); }
+.My-Color-Theme-3-rgba { color: rgba(207, 182, 153, 1); }
+.My-Color-Theme-4-rgba { color: rgba(70, 110, 130, 1); }
+.My-Color-Theme-5-rgba { color: rgba(153, 189, 207, 1); }
+
+
+:root{
+    --text:#466E82;
+    --backgrnd: #FFEDD6;
+    --lgtTxt: #99BDCF;
+    --lgtbgrnd: rgba(153, 189, 207, .25);
+}
+
+
 body{
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
     max-width: 100%;
     font-family: "Poppins", sans-serif;
-    background-color: rgb(239, 239, 232);
+    background-color: var(--backgrnd);
 }
 
 .header{
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
-    margin-bottom: 10%;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 25%, rgba(134,131,131,1) 75%, rgba(249,244,244,1) 100%);    
+    margin-bottom: 2.5%;
+}
+
+.comments{
+    width: 99%;
+    position: absolute;
+    top: 1%;
+    text-align: right;
+}
+
+li{
+    font-size: 1.5vw;
+    display: inline;
+    margin-left: 1%;
+}
+
+.info{
+    padding: 1%;
+    color: var(--text);
+    background-color: var(--backgrnd);
+    font-weight: bold;
+}
+
+body > ul > li a:hover{
+    transition: 1000ms;
+    color: var(--backgrnd);
+    background-color: var(--text);
+    text-decoration: none;
 }
 
 .foto{
-    position: relative;
-    grid-row: 1/2;
-    grid-column: 1/5;
-    opacity: .5;
+    opacity: .8;
     max-width: 100%;
-    z-index: -5;
 }
 
-img{
-    max-width: 90%;
-    height: auto;
+.title{
+    position: absolute;
+    top: 8%;
+    width: 100%;
 }
 
-.home{
-    grid-row: 1/2;    
-    grid-column: 3/4;
-    justify-self: center;
-    font-size: 2vw;
+#title{
+    text-align: center;
+    font-size: 5vw;
     font-weight: bold;
-    text-shadow: 1px 1px .5em rgb(10, 29, 100), 0 0 2em rgb(141, 141, 165), 0 0 0.5em rgb(136, 49, 106);
-    padding: 5%;
-}
-
-.comment{
-    grid-row: 1/2;    
-    grid-column: 4/5;
-    justify-self: center;
-    font-size: 2vw;
-    font-weight: bold;
-    text-shadow: 1px 1px .5em rgb(10, 29, 100), 0 0 2em rgb(141, 141, 165), 0 0 0.5em rgb(136, 49, 106);
-    padding: 5%;
+    color: whitesmoke;
+    text-shadow: .25em .25em .25em rgb(24, 22, 22), 0 0 1em rgb(20, 20, 23), 0 0 0.5em rgb(19, 19, 22);
 }
 
 #form{
     max-width: 90%;
     display: flex;
     flex-direction: column;
-    margin: 0 auto 10%;
+    margin: 0 auto;
 }
 
 .input2{
-    width: 50%;
+    border: .3em solid;
     padding: 1%;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
+    border-image: linear-gradient(to top, var(--text), var(--lgtTxt));
+    border-image-slice: 1;
+    width: 50%;
     margin-bottom: 2.5%;
 }
 
+.input2:focus{
+    background-color: var(--lgtbgrnd);
+}
+
 textarea {
-    height: 300px;
+    border: .3em solid;
     padding: 1%;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    font-size: 16px;
+    border-image-source: linear-gradient(to top, var(--lgtTxt), var(--text));
+    border-image-slice: 1;
+    height: 200px;
+    margin-bottom: 2.5%;
     resize: none;
-    margin-bottom: 5%;
   }
 
+  textarea:focus {
+    background-color: var(--lgtbgrnd);
+}
+
 #submit{
-    border-radius: 20px;
-    font-size: 2vw;
-    color: white;
-    max-width: 25%;
-    background-color: slategray;
+    border: .25em solid;
     padding: 1%;
+    border-image-source: linear-gradient(to top, #CFB699, var(--lgtTxt));
+    border-image-slice: 1;
+    font-size: 2vw;
+    font-weight: bold;
+    color: white;
+    background-color:var(--text);
+    padding: 1%;
+}
+
+#submit:hover{
+    transition: 1000ms;
+    color: var(--text);
+    background-color: var(--backgrnd);
 }
 
 a{
@@ -91,8 +142,14 @@ a{
 }
 
 .footer{
-    padding: 1%;
-    background-color: slategray;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
     font-size: 1.5vw;
+    font-weight: bold;
     text-align: center;
+    color: whitesmoke;
+    background-color: var(--text);
 }

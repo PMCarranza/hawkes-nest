@@ -8,25 +8,34 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/leave.css">
 </head>
+
 <body>
 
     <div class="header">
-        
-        <a href="../index.html" class="home">Home</a>
-        <a href="./read.html" class="comment">Read Comments</a>
 
         <img src="../images/top-image.JPG" class="responsive foto" alt="view from back of the house"
           title="C and J trying to catch ducks">
+    
+      </div>
+    
+      <ul class="comments">
+    
+        <li class="item"><a href="../index.html" class="info">Home</a></li>
+        <li class="item"><a href="./read.html" class="info">Read comments</a></li>
+    
+      </ul>
+    
+      <div class="title">    
+        <h1 id="title">The Hawkes' Nest</h1>
+      </div>
 
-    </div>
 
     <!-- <form action="" method="post"> -->
 
         <form id="form">
             
-            <!--this was removed from the form add if needed = value="name" 1/16/23 mc -->
+            <input type="text" id="name" class="input2" name="name" placeholder="Name">
 
-            <input type="text" id="name" name="name" placeholder="Name" class="input2">
             <textarea id="comment" name="comment" placeholder="leave a comment or recommendation here"></textarea>
             <button id="submit">Submit</button>
 
