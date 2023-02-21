@@ -129,7 +129,7 @@ h5{
 
 .flex-container {
     margin-top: 5%;
-    gap: 2em;
+    gap: 1em;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -139,23 +139,28 @@ h5{
   }
   
   .flex-items {
-    background-color: var(--drkbckgrnd);
-    width: 25em;
-    padding: 3%;
-  }
-
-  .to-do{
-    font-size: 1.5vw;
     text-align: center;
-    color: var(--txtbtn);
-    font-weight: bold;
+    width: 25em;
+    padding: 2em;
   }
 
-  .to-do a:hover{
-    transition: 1000ms;
-    font-size: 2.5vw;
-    background: var(--backgrnd);
-    background: repeating-radial-gradient(circle farthest-side at center center, #1B7F79 0%, #FF4858 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  .to-do a{
+    font-size: 2vw;
+    color: var(--drkbckgrnd);
+    font-weight: bold;
+    border: 1em solid;
+    border-image: repeating-linear-gradient(135deg,#FF4858 0 10px,#72F2EB 0 20px,#747F7F 0 30px) 8;
+    -webkit-mask: 
+      conic-gradient(from 180deg at top 8px right 8px, #0000 90deg,#000 0)
+       var(--_i,200%) 0  /200% var(--_i,8px) border-box no-repeat,
+      conic-gradient(at bottom 8px left  8px,  #0000 90deg,#000 0)
+       0   var(--_i,200%)/var(--_i,8px) 200% border-box no-repeat,
+      linear-gradient(#000 0 0) padding-box no-repeat;
+    transition: .75s, -webkit-mask-position .3s .3s;
+  }
+
+  .to-do a:hover {
+    text-decoration: none;
+    --_i: 100%;
+    transition: .75s, -webkit-mask-size .3s .3s;
   }
