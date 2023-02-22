@@ -133,8 +133,6 @@ h5{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    align-content: center;
   }
   
   .flex-items {
@@ -163,3 +161,31 @@ h5{
     --_i: 100%;
     transition: .75s, -webkit-mask-size .3s .3s;
   }
+
+  @media (max-width: 600px) {
+    .title{
+        top: 5%;
+    }
+
+    .recommends{
+        margin-bottom: 10%;
+    }
+
+    .flex-container{
+        max-width: 50%;
+        margin: auto;
+    }
+
+    .flex-items{
+        padding: 0;
+    }
+
+    .to-do{
+        background-color: var(--drkbckgrnd);
+    }
+
+    .to-do a{
+        color: var(--txtbtn);
+    }
+  }
+  
