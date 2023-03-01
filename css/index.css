@@ -41,38 +41,44 @@ body{
 .comments{
     width: 99%;
     position: absolute;
-    top: 1%;
+    top: 3%;
     text-align: right;
+    margin-right: 1%;
+    z-index: 2;
 }
 
-li{
+.item{
     font-size: 1.5vw;
     display: inline;
-    margin-left: 1%;
 }
 
 .info{
-    padding: 1%;
+    padding: .5%;
     color: var(--drkbckgrnd);
     background-color: var(--txtbtn);
     font-weight: bold;
 }
 
-body > ul > li a:hover{
+.item a:hover{
     transition: 1000ms;
     color: var(--txtbtn);
     background-color: var(--drkbckgrnd);
     text-decoration: none;
 }
 
+body > div.comments > div:nth-child(1) > a{
+    margin-right: 1%;
+}
+
 .foto{
     opacity: .8;
     max-width: 100%;
+    z-index: -1;
 }
 
 .title{
     position: absolute;
-    top: 7%;
+    top: 2em;
     width: 100%;
 }
 
@@ -186,6 +192,17 @@ h5{
     color: #1B7F79;
   }
 
+  @media (min-width: 1500px){
+
+    .recommends{
+        margin-bottom: 5%;
+    }
+
+    .flex-container{
+        max-width: 80%;
+        margin: auto;
+    }
+}
 
   @media (min-width: 1200px){
 
@@ -198,7 +215,7 @@ h5{
 
 @media (max-width: 830px) {
     .title{
-        top: 5%;
+        top: 2.5em;
     }
 
     .recommends{
@@ -210,21 +227,53 @@ h5{
         height: 4em;
         padding: 0;
     }
+
   }
 
+  @media (max-width: 670px) {
 
+    .comments{
+        top:3.5%;
+    }
 
-  @media (max-width: 600px) {
     .title{
-        top: 5%;
+        top: 3em;
     }
 
     .recommends{
+        font-size: 1rem;
         margin-bottom: 10%;
     }
 
     .to-do{
         padding: 0;
     }
+    
   }
   
+  @media (max-width: 350px) {
+
+    .comments{
+        top: 5%;
+    }
+
+    .title{
+        top: 3em;
+    }
+
+    .recommends{
+        font-size: .75rem;
+        margin-bottom: 10%;
+    }
+
+    .to-do{
+        width: 14em;
+        height: 2em;
+        padding: 0;
+    }
+
+    .to-do a{
+        font-size: 1rem;
+    }
+
+  }
