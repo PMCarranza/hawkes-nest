@@ -24,7 +24,6 @@
 }
 
 body{
-    position: relative;
     margin: 0;
     font-family: "Poppins", sans-serif;
     background-color: whitesmoke;
@@ -37,21 +36,27 @@ body{
     margin-bottom: 2.5%;
 }
 
+.foto{
+    opacity: .8;
+    max-width: 100%;
+    z-index: -1;
+}
+
 .comments{
     width: 99%;
     position: absolute;
-    top: 3%;
+    top: 1%;
     text-align: right;
     margin-right: 1%;
     z-index: 2;
 }
 
 .item{
-    font-size: 1.5vw;
     display: inline;
 }
 
 .info{
+    font-size: 1rem;
     padding: .5%;
     color: var(--drkbckgrnd);
     background-color: var(--txtbtn);
@@ -69,15 +74,9 @@ body > div.comments > div:nth-child(1) > a{
     margin-right: 1%;
 }
 
-.foto{
-    opacity: .8;
-    max-width: 100%;
-    z-index: -1;
-}
-
 .title{
     position: absolute;
-    top: 2em;
+    top: 1.5em;
     width: 100%;
 }
 
@@ -128,10 +127,12 @@ h5{
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
+    margin-bottom: 5%;
 }
 
 .flex-container {
-    margin-top: 5%;
+    max-width: 90%;
+    margin: auto;
     gap: 1em;
     display: flex;
     flex-wrap: wrap;
@@ -148,6 +149,7 @@ h5{
     background: rgba(26, 126, 121, .25);
     overflow: hidden;
     border-radius: 1em;
+    flex-grow: 1;
 }
 
 .to-do::before{
@@ -214,7 +216,11 @@ h5{
 
 @media (max-width: 830px) {
     .title{
-        top: 2.5em;
+        top: 2em;
+    }
+
+    .comments{
+        top: .5%;
     }
 
     .recommends{
@@ -231,12 +237,16 @@ h5{
 
   @media (max-width: 670px) {
 
+    .info{
+        font-size: 2vw;
+    }
+
     .comments{
-        top:3.5%;
+        top: -.5%;
     }
 
     .title{
-        top: 3em;
+        top: 2em;
     }
 
     .recommends{
@@ -246,18 +256,54 @@ h5{
 
     .to-do{
         padding: 0;
+        height: 3em;
     }
     
   }
   
-  @media (max-width: 350px) {
+  @media (max-width: 376px) {
+
+    .info{
+        font-size: 2vw;
+    }
 
     .comments{
-        top: 5%;
+        top: -1%;
     }
 
     .title{
-        top: 3em;
+        top: 2em;
+    }
+
+    .recommends{
+        font-size: .75rem;
+        margin-bottom: 10%;
+    }
+
+    .to-do{
+        width: 14em;
+        height: 2em;
+        padding: 0;
+    }
+
+    .to-do a{
+        font-size: 1rem;
+    }
+
+  }
+
+  @media (max-width: 320px) {
+
+    .info{
+        font-size: 2vw;
+    }
+
+    .comments{
+        top: -1.75%;
+    }
+
+    .title{
+        top: 1.75em;
     }
 
     .recommends{
