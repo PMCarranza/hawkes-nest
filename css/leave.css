@@ -27,12 +27,10 @@
 
 
 body{
-    position: relative;
     margin: 0;
-    padding-bottom: 6rem;
-    max-width: 100%;
     font-family: "Poppins", sans-serif;
     background-color: whitesmoke;
+    bottom: 2em;
 }
 
 .header{
@@ -41,41 +39,47 @@ body{
     margin-bottom: 2.5%;
 }
 
+.foto{
+    opacity: .8;
+    max-width: 100%;
+    z-index: -1;
+}
+
 .comments{
     width: 99%;
     position: absolute;
     top: 1%;
     text-align: right;
+    margin-right: 1%;
+    z-index: 2;
 }
 
-li{
-    font-size: 1.5vw;
+.item{
     display: inline;
-    margin-left: 1%;
 }
 
 .info{
-    padding: 1%;
+    font-size: 1rem;
+    padding: .5%;
     color: var(--drkbckgrnd);
     background-color: var(--txtbtn);
     font-weight: bold;
 }
 
-body > ul > li a:hover{
+.item a:hover{
     transition: 1000ms;
     color: var(--txtbtn);
     background-color: var(--drkbckgrnd);
     text-decoration: none;
 }
 
-.foto{
-    opacity: .8;
-    max-width: 100%;
+body > div.comments > div:nth-child(1) > a{
+    margin-right: 1%;
 }
 
 .title{
     position: absolute;
-    top: 8%;
+    top: 6em;
     width: 100%;
 }
 
@@ -89,7 +93,13 @@ body > ul > li a:hover{
 
 .main{
     margin: 0 auto;
-    max-width: 75%;
+    max-width: 90%;
+}
+
+p{
+    font-size: 2vw;
+    text-align: center;
+    margin-bottom: 5%;
 }
 
 #form{
@@ -117,7 +127,7 @@ textarea {
     padding: 1%;
     border-image-source: linear-gradient(to top, #00CCC0, #FF4858);
     border-image-slice: 1;
-    height: 200px;
+    height: 400px;
     margin-bottom: 2.5%;
     resize: none;
   }
@@ -132,7 +142,8 @@ textarea {
     font-size: 2vw;
     font-weight: bold;
     color: white;
-    background-color:var(--drkbckgrnd);
+    background-color:var(--button);
+    z-index: 1;
 }
 
 #submit:hover{
@@ -143,7 +154,7 @@ textarea {
     transition: 1000ms;
 }
 
-a{
+/* a{
     text-decoration: none;
     color: whitesmoke;
 }
@@ -159,4 +170,73 @@ a{
     text-align: center;
     color: whitesmoke;
     background-color: var(--text);
-}
+} */
+
+
+@media (max-width: 830px) {
+    .title{
+        top: 2em;
+    }
+
+    .comments{
+        top: .5%;
+    }
+
+  }
+
+@media (max-width: 670px) {
+
+    .info{
+        font-size: 2vw;
+    }
+
+    .comments{
+        top: -.5%;
+    }
+
+    .title{
+        top: 2em;
+    }
+
+    p{
+        font-size: .75rem;
+
+    }
+    
+    #form{
+        font-size: .5rem;
+    }
+    
+  }
+
+  @media (max-width: 376px) {
+
+    .info{
+        font-size: 2vw;
+    }
+
+    .comments{
+        top: -1%;
+    }
+
+    .title{
+        top: 2em;
+    }
+
+  }
+
+  @media (max-width: 320px) {
+
+    .info{
+        font-size: 2vw;
+    }
+
+    .comments{
+        top: -1.75%;
+    }
+
+    .title{
+        top: 1.75em;
+    }
+
+  }

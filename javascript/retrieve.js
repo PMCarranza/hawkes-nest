@@ -26,6 +26,12 @@ var date = '';
       
             $('#comments').append(comments); 
             console.log(sv);
+
+            // $('who').append(who);
+            // $('what').append(what);
+            // $('when').append(when);
+      
+            // $('#comments').append(who, what, when); 
            
         // Handle the errors
     }, function(errorObject) {
