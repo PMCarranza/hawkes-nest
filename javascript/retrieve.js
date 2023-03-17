@@ -16,13 +16,13 @@ var date = '';
 
 
             
-            let comments = $('<div>');
+            let comments = $('<div>').addClass('box');
 
             let who = $('<p>').text(sv.user).addClass('who');
             let what = $('<p>').text(sv.comment).addClass('what');
             let when = $('<p>').text(sv.date).addClass('when');
         
-            comments.append(when, who, what);
+            comments.append(when, what, who);
       
             $('#comments').append(comments); 
             console.log(sv);
