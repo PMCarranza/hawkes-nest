@@ -30,7 +30,6 @@ body{
     margin: 0;
     font-family: "Poppins", sans-serif;
     background-color: whitesmoke;
-    bottom: 2em;
 }
 
 .header{
@@ -110,10 +109,7 @@ p{
 }
 
 .input2{
-    border: .3em solid;
     padding: 1%;
-    border-image: linear-gradient(to top, #FF4858, #00CCC0);
-    border-image-slice: 1;
     width: 50%;
     margin-bottom: 2.5%;
 }
@@ -123,13 +119,9 @@ p{
 }
 
 textarea {
-    border: .3em solid;
     padding: 1%;
-    border-image-source: linear-gradient(to top, #00CCC0, #FF4858);
-    border-image-slice: 1;
-    height: 400px;
+    height: 15rem;
     margin-bottom: 2.5%;
-    resize: none;
   }
 
   textarea:focus {
@@ -138,7 +130,6 @@ textarea {
 
 #submit{
     border: .15em solid var(--drkbckgrnd);
-    padding: 1%;
     font-size: 2vw;
     font-weight: bold;
     color: white;
@@ -154,23 +145,9 @@ textarea {
     transition: 1000ms;
 }
 
-/* a{
-    text-decoration: none;
-    color: whitesmoke;
-}
-
 .footer{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-    font-size: 1.5vw;
-    font-weight: bold;
-    text-align: center;
-    color: whitesmoke;
-    background-color: var(--text);
-} */
+    height: 3rem;
+}
 
 
 @media (max-width: 830px) {

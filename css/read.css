@@ -93,35 +93,40 @@ body > div.comments > div:nth-child(1) > a{
 
 .main{
     margin: 0 auto;
-    max-width: 90%;
+    max-width: 95%;
+}
+
+.box {
+    max-width: 100%;
+    box-shadow: -20px 20px 0 -18px whitesmoke,
+    20px -20px 0 -18px whitesmoke,
+    20px 20px 0 -20px var(--lightbkgrnd),
+    0 0 0 2px var(--lightbkgrnd);
+    background-color: var(--fondo);
 }
 
 p{
-    font-size: 2vw;
-    text-align: center;
-    margin-bottom: 5%;
+    padding: 1%;
 }
 
+.when{
+    font-size: 1rem;
+}
 
-/* a{
-    text-decoration: none;
-    color: whitesmoke;
+.what{
+    font-size: 1.5rem;
+    margin-bottom: 1%;
+}
+
+.who{
+    font-size: 1rem;
+    text-align: right;
+    margin-bottom: 2.5%;
 }
 
 .footer{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-    font-size: 1.5vw;
-    font-weight: bold;
-    text-align: center;
-    color: whitesmoke;
-    background-color: var(--text);
-} */
-
-
+    height: 3rem;
+}
 
 @media (max-width: 830px) {
     .title{
@@ -172,6 +177,19 @@ p{
     .title{
         top: 2em;
     }
+    
+    .when{
+        font-size: 12px;
+        color: red;
+    }
+
+    .what{
+        font-size: 16px;
+    }
+
+    .who{
+        font-size: 12px;
+    }
 
   }
 
@@ -187,6 +205,19 @@ p{
 
     .title{
         top: 1.75em;
+    }
+
+    .when{
+        font-size: 12px;
+        color: red;
+    }
+
+    .what{
+        font-size: 14px;
+    }
+
+    .who{
+        font-size: 12px;
     }
 
   }
