@@ -17,14 +17,11 @@
 
 :root{
     --drkbckgrnd:#2d5215;
-    --lightbkgrnd:#1B7F79;
     --text:#373b3b;
     --backgrnd: #72F2EB;
     --button: #FF4858;
     --txtbtn: white;
-    --fondo:rgba(116, 126, 126, .15);
 }
-
 
 body{
     margin: 0;
@@ -79,7 +76,7 @@ body > div.comments > div:nth-child(1) > a{
 
 .title{
     position: absolute;
-    top: 6em;
+    top: 1.5em;
     width: 100%;
 }
 
@@ -93,129 +90,25 @@ body > div.comments > div:nth-child(1) > a{
 
 .main{
     margin: 0 auto;
-    max-width: 95%;
+    max-width: 75%;
 }
 
-.box {
-    max-width: 100%;
-    box-shadow: -20px 20px 0 -18px whitesmoke,
-    20px -20px 0 -18px whitesmoke,
-    20px 20px 0 -20px var(--lightbkgrnd),
-    0 0 0 2px var(--lightbkgrnd);
-    background-color: var(--fondo);
-}
-
-p{
-    padding: 1%;
-}
-
-.when{
-    font-size: 1rem;
-}
-
-.what{
+.text{
+    color: var(--text);
     font-size: 1.5rem;
-    margin-bottom: 1%;
+    text-align: center;
+    margin-bottom: 5%;
 }
 
-.who{
-    font-size: 1rem;
-    text-align: right;
-    margin-bottom: 2.5%;
+.recommends{
+    background: var(--backgrnd);
+    background: repeating-radial-gradient(circle farthest-side at center center, #1B7F79 0%, #FF4858 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 1%;
+    color: var(--drkbckgrnd);
+    font-size: 2.25rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5%;
 }
-
-.footer{
-    height: 3rem;
-}
-
-@media (max-width: 830px) {
-    .title{
-        top: 2em;
-    }
-
-    .comments{
-        top: .5%;
-    }
-
-  }
-
-@media (max-width: 670px) {
-
-    .info{
-        font-size: 2vw;
-    }
-
-    .comments{
-        top: -.5%;
-    }
-
-    .title{
-        top: 2em;
-    }
-
-    p{
-        font-size: .75rem;
-
-    }
-    
-    #form{
-        font-size: .5rem;
-    }
-    
-  }
-
-  @media (max-width: 376px) {
-
-    .info{
-        font-size: 2vw;
-    }
-
-    .comments{
-        top: -1%;
-    }
-
-    .title{
-        top: 2em;
-    }
-    
-    .when{
-        font-size: 12px;
-    }
-
-    .what{
-        font-size: 16px;
-    }
-
-    .who{
-        font-size: 12px;
-    }
-
-  }
-
-  @media (max-width: 320px) {
-
-    .info{
-        font-size: 2vw;
-    }
-
-    .comments{
-        top: -1.75%;
-    }
-
-    .title{
-        top: 1.75em;
-    }
-
-    .when{
-        font-size: 12px;
-    }
-
-    .what{
-        font-size: 14px;
-    }
-
-    .who{
-        font-size: 12px;
-    }
-
-  }
